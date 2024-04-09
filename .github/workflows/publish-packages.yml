@@ -22,7 +22,7 @@ jobs:
       - name: Build
         run: yarn build
       - name: Version
-        run: yarn version --new-version "${GITHUB_SHA:11}" --no-git-tag-version
+        run: yarn version --new-version "1.0.0" --no-git-tag-version
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
